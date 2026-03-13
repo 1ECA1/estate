@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
+import QAuth from '../componets/QAuth';
 // import SignIn from './SignIn'
 
 export default function SignUp() {
@@ -59,6 +60,7 @@ export default function SignUp() {
         <input type="email" placeholder='email' className='border p-3 rounded-lg' id='email' onChange={handleChange}/>
         <input type="password" placeholder='password' className='border p-3 rounded-lg' id='password'onChange={handleChange} />
         <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading ?'Loading...' : 'SignUp'}</button>
+        <QAuth/>
       </form >
       <div className='flex gap-2 mt-5'>
         <p>have an account?</p>
