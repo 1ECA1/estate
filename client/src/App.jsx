@@ -5,6 +5,7 @@ import SignUp from "./pages/SignUp";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Header from "./componets/Header";
+import PrivateRoute from "./componets/PrivateRoute";
 
 export default function App() {
   return (
@@ -20,7 +21,10 @@ export default function App() {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/about" element={<About />} />
+        <Route element={<PrivateRoute />}>
         <Route path="/profile" element={<Profile />} />
+        </Route>
+        
 
         {/* 404 page */}
         <Route path="*" element={<h1>Page Not Found</h1>} />
